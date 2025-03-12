@@ -1363,6 +1363,28 @@ class Commands:
         "Toggle multiline mode (swaps behavior of Enter and Meta+Enter)"
         self.io.toggle_multiline_mode()
 
+    def cmd_copy_all(self, args):
+        "Copy the all messages to the clipboard"
+        all_messages = self.coder.done_messages + self.coder.cur_messages
+        assistant_messages = [msg["content"] for msg in all_messages]
+
+        if not assistant_messages:
+            self.io.tool_error("No assistant messages found to copy.")
+            return
+
+        joined_messages = "\n\n".join(assistant_messages)
+
+        try:
+            pyperclip.copy(joined_messages)
+            self.io.tool_output(f"Copied all messages to clipboard.")
+        except pyperclip.PyperclipException as e:
+            self.io.tool_error(f"Failed to copy to clipboard: {str(e)}")
+            self.io.tool_output(
+                "You may need to install xclip or xsel on Linux, or pbcopy on macOS."
+            )
+        except Exception as e:
+            self.io.tool_error(f"An unexpected error occurred while copying to clipboard: {str(e)}")
+
     def cmd_copy(self, args):
         "Copy the last assistant message to the clipboard"
         all_messages = self.coder.done_messages + self.coder.cur_messages

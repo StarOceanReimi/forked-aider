@@ -622,10 +622,13 @@ class Model(ModelSettings):
         if self.is_deepseek_r1():
             messages = ensure_alternating_roles(messages)
 
+        api_base = os.environ.get("API_URL_BASE")
+
         kwargs = dict(
             model=self.name,
             messages=messages,
             stream=stream,
+            api_base=api_base,
         )
 
         if self.use_temperature is not False:
