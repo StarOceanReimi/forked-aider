@@ -4,7 +4,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -c requirements/common-constraints.txt
     #   aiohttp
-aiohttp==3.11.14
+aiohttp==3.11.16
     # via
     #   -c requirements/common-constraints.txt
     #   litellm
@@ -86,7 +86,7 @@ frozenlist==1.5.0
     #   -c requirements/common-constraints.txt
     #   aiohttp
     #   aiosignal
-fsspec==2025.3.1
+fsspec==2025.3.2
     # via
     #   -c requirements/common-constraints.txt
     #   huggingface-hub
@@ -115,7 +115,7 @@ httpx==0.28.1
     #   -c requirements/common-constraints.txt
     #   litellm
     #   openai
-huggingface-hub==0.29.3
+huggingface-hub==0.30.1
     # via
     #   -c requirements/common-constraints.txt
     #   tokenizers
@@ -143,7 +143,7 @@ jiter==0.9.0
     # via
     #   -c requirements/common-constraints.txt
     #   openai
-json5==0.10.0
+json5==0.11.0
     # via
     #   -c requirements/common-constraints.txt
     #   -r requirements/requirements.in
@@ -156,7 +156,7 @@ jsonschema-specifications==2024.10.1
     # via
     #   -c requirements/common-constraints.txt
     #   jsonschema
-litellm==1.65.0
+litellm==1.65.1
     # via
     #   -c requirements/common-constraints.txt
     #   -r requirements/requirements.in
@@ -198,7 +198,7 @@ numpy==1.26.4
     #   -c requirements/common-constraints.txt
     #   scipy
     #   soundfile
-openai==1.69.0
+openai==1.70.0
     # via
     #   -c requirements/common-constraints.txt
     #   litellm
@@ -266,7 +266,7 @@ pydub==0.25.1
     # via
     #   -c requirements/common-constraints.txt
     #   -r requirements/requirements.in
-pyflakes==3.3.1
+pyflakes==3.3.2
     # via
     #   -c requirements/common-constraints.txt
     #   flake8
