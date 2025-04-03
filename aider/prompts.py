@@ -17,6 +17,7 @@ Ensure the commit message:
 - Starts with the appropriate prefix.
 - Is in the imperative mood (e.g., \"Add feature\" not \"Added feature\" or \"Adding feature\").
 - Does not exceed 72 characters.
+- Use **Simplified Chinese**
 
 Reply only with the one-line commit message, without any additional text, explanations, \
 or line breaks.
