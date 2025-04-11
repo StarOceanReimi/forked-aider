@@ -198,6 +198,7 @@ class GitRepo:
         content += diffs
 
         system_content = self.commit_prompt or prompts.commit_system
+
         messages = [
             dict(role="system", content=system_content),
             dict(role="user", content=content),
