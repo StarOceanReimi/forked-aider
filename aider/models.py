@@ -746,6 +746,9 @@ class Model(ModelSettings):
     def is_ollama(self):
         return self.name.startswith("ollama/") or self.name.startswith("ollama_chat/")
 
+    def is_openrouter(self):
+        return self.name.startswith("openrouter/")
+
     def send_completion(self, messages, functions, stream, temperature=None):
         if os.environ.get("AIDER_SANITY_CHECK_TURNS"):
             sanity_check_messages(messages)
@@ -753,7 +756,10 @@ class Model(ModelSettings):
         if self.is_deepseek_r1():
             messages = ensure_alternating_roles(messages)
 
-        api_base = os.environ.get("API_URL_BASE")
+        api_base = None
+        
+        if self.is_openrouter():
+            api_base = os.environ.get("OPENROUTER_API_BASE")
 
         kwargs = dict(
             model=self.name,
