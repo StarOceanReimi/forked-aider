@@ -12,7 +12,6 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python",
     "Topic :: Software Development",
 ]
@@ -48,5 +47,5 @@ build-backend = "setuptools.build_meta"
 write_to = "aider/_version.py"
 
 [tool.codespell]
-skip = "*.svg,Gemfile.lock"
+skip = "*.svg,Gemfile.lock,tests/fixtures/*,aider/website/assets/*"
 write-changes = true
