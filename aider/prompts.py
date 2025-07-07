@@ -20,9 +20,6 @@ Ensure the commit message:{language_instruction}
 - Use **Simplified Chinese**
 
 Reply only with the one-line commit message, without any additional text, explanations, or line breaks.
-
-Reply only with the one-line commit message, without any additional text, explanations, \
-or line breaks.
 """
 
 # COMMANDS
